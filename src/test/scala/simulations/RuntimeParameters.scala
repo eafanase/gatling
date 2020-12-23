@@ -9,8 +9,8 @@ class RuntimeParameters extends Simulation {
 
   private def getProperty(propertyName: String, defaultValue: String) = {
     Option(System.getenv(propertyName))
-      .orElse(Option(System.getProperty(propertyName)))
-      .getOrElse(defaultValue)
+      .orElse(Option(System.getProperty(propertyName))) //устанавливаю конкретное значение в команде: mvn gatling:test -Dgatling.simulationClass=simulations.RuntimeParameters -DUSERS=10 -DRAMP_DURATION=5 -DDURATION=30
+      .getOrElse(defaultValue) //если значение не заданно, то с дефолтным значением ниже
   }
 
   def userCount: Int = getProperty("USERS", "5").toInt

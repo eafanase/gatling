@@ -9,6 +9,7 @@ class CodeReuseWithObjects extends Simulation {
     .header("Accept", "application/json")
 
 
+
   def getAllVideoGames() = {
     repeat(3) {
       exec(http("Get all video games - 1st call")
@@ -16,6 +17,14 @@ class CodeReuseWithObjects extends Simulation {
         .check(status.is(200)))
     }
   }
+  // This method is extracted w/o pause from ->
+  /*val scn = scenario("Video Game DB - 3 calls")
+
+    .exec(http("Get all video games - 1st call")
+      .get("videogames"))
+    .pause(5*/
+  //)
+
 
   def getSpecificVideoGame() = {
     repeat(5) {

@@ -23,7 +23,7 @@ class CsvFeederToCustom extends Simulation {
     }
   }
 
-  val scn = scenario("Csv Feeder test")
+  val scn = scenario("Custom Feeder test")
     .exec(getSpecificVideoGame())
 
 

@@ -36,8 +36,8 @@ class RampUsersLoadSimulation extends Simulation {
   setUp(
     scn.inject(
       nothingFor(5 seconds),
-   //   constantUsersPerSec(10) during (10 seconds)
-      rampUsersPerSec(1) to (5) during (20 seconds)
+   //   constantUsersPerSec(10) during (10 seconds) // по одному юзеру каждую секунду на протяжении 10 сек
+      rampUsersPerSec(1) to (5) during (20 seconds) //кажд сек увеличиват юзеров от 1 до 5, на протяжении 20 сек
     ).protocols(httpConf.inferHtmlResources())
   )
 

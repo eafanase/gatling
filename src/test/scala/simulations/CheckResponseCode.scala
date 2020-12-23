@@ -19,7 +19,7 @@ class CheckResponseCode extends Simulation {
 
     .exec(http("Get specific game")
       .get("videogames/1")
-        .check(status.in(200 to 210)))
+        .check(status.in(200 to 210))) // status is in the range
     .pause(1, 20)
 
     .exec(http("Get all Video games - 2nd call")

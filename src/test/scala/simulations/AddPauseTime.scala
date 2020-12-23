@@ -13,6 +13,7 @@ class AddPauseTime extends Simulation {
   val scn = scenario("Video Game DB - 3 calls")
 
     .exec(http("Get all video games - 1st call")
+
     .get("videogames"))
     .pause(5)
 

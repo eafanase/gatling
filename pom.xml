@@ -12,7 +12,7 @@
     <encoding>UTF-8</encoding>
 
     <gatling.version>3.3.1</gatling.version>
-    <gatling-maven-plugin.version>3.0.5</gatling-maven-plugin.version>
+    <gatling-maven-plugin.version>3.1.1</gatling-maven-plugin.version>
   </properties>
 
   <dependencies>
